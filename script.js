@@ -18,8 +18,8 @@ fetchSitemap = async () => {
         for (const url of urls) {
             const li = document.createElement("li");
             const a = document.createElement("a");
-            a.textContent = url;
-            a.href = url;
+            a.textContent = url.textContent;
+            a.href = url.textContent;
             a.target = "_blank";
             li.appendChild(a);
             urlListUl.appendChild(li);
