@@ -1,7 +1,7 @@
 const urlListUl = document.getElementById("urlList");
 const loadingMessageDiv = document.getElementById("loadingMessage");
 
-fetchSitemap = async () => {
+const fetchSitemap = async () => {
     try {
         const response = await fetch("https://yagiyuu.github.io/sitemap.xml", {
             method: "GET",
@@ -29,7 +29,7 @@ fetchSitemap = async () => {
         li.textContent = `An error occurred: ${err}`;
         urlListUl.appendChild(li);
     } finally {
-        loadingMessage.style.display = "none";
+        loadingMessageDiv.style.display = "none";
     }
 }
 
